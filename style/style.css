@@ -1,19 +1,51 @@
+:root {
+  --bg-main-color: #00000080;
+  --bg-accent-color: #2d2d2d;
+  --accent-color: #ff5035;
+  --text-accent-color: #ffe498;
+  --text-edit-bg-color: #575757;
+  --border-color: #3f3f3f;
+  --shadow-color: #202020;
+  --document-bg-color: #68686850;
+  --component-bg-gradient: radial-gradient(
+    circle,
+    #646464e6 0%,
+    #363636e6 100%
+  );
+  --smokywhite: #dddbd8;
+  --black: #000000;
+  --translucent-black: #00000099;
+}
+
+li {
+  list-style: none;
+  padding-left: 0;
+}
+
+label {
+  color: var(--text-accent-color);
+}
+
+/* TODO: take care of the spacing btw list */
+section {
+  padding: 10px 0;
+}
+
 * {
   outline: 0;
   box-sizing: border-box;
 }
 
-body,
-html {
+body {
   background-image: url('../assets/note-bg.jpeg');
-  /* Full height */
-  /* height: 100%; */
-  width: 100%;
-
-  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 1.15rem;
+  margin: 0;
 }
 
 .app {
@@ -22,21 +54,24 @@ html {
   height: 100%;
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+}
+
+.banner {
+  background: var(--bg-main-color);
+  border-bottom: 1px solid var(--bg-accent-color);
+  text-align: center;
+}
+
+.banner__title {
+  margin: 20px;
+  color: var(--accent-color);
 }
 
 .control-panel {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-li {
-  list-style: none;
-}
-
-div,
-section {
-  padding: 10px 0;
 }
 
 .create-button {
@@ -70,5 +105,6 @@ section {
 }
 
 .footer {
+  border-top: 1px solid var(--border-color);
   text-align: center;
 }
