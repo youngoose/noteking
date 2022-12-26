@@ -26,11 +26,6 @@ label {
   color: var(--text-accent-color);
 }
 
-/* TODO: take care of the spacing btw list */
-section {
-  padding: 10px 0;
-}
-
 * {
   outline: 0;
   box-sizing: border-box;
@@ -74,6 +69,17 @@ body {
   justify-content: center;
 }
 
+.dialog__container button {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+
+input,
+textarea {
+  font-size: 1.5rem;
+}
+
 .create-button {
   margin: 0.1em 0.2em;
   text-align: center;
@@ -83,6 +89,19 @@ body {
   font-weight: 600;
   font-size: 0.8rem;
   border-radius: 2px;
+}
+
+.dialog__container .dialog__submit {
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 1.1rem;
+  border: 0.5px solid black;
+}
+
+.dialog__container .dialog__submit:hover,
+.dialog__container .dialog__submit:focus {
+  color: #000000;
+  cursor: pointer;
 }
 
 .document {
@@ -142,4 +161,106 @@ dialog {
   border: 1px solid var(--border-color);
   border-radius: 0.5rem;
   box-shadow: 2px 2px 20px var(--shadow-color);
+}
+
+.dialog__submit {
+  align-self: flex-end;
+  padding: 0.5rem 1.5rem;
+}
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.close {
+  align-self: flex-end;
+  padding: 0.2rem;
+  color: var(--accent-color);
+  font-size: 28px;
+  font-weight: bold;
+  margin: 3px;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--shadow-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* -- PAGE ITEM */
+.page-item {
+  margin: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 2px 2px 6px var(--shadow-color);
+  background: var(--component-bg-gradient);
+}
+
+.page-item__controls {
+  padding-right: 0.5em;
+}
+
+.page-item__controls .close {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+
+.page-item__title {
+  margin-top: 1.5rem;
+  color: var(--text-accent-color);
+}
+
+/* -- Image & Video -- */
+.video,
+.image {
+  display: flex;
+  width: 100%;
+  height: 250px;
+}
+
+.video__player,
+.image__holder {
+  flex: 60% 1 1;
+}
+
+.video__title,
+.image__title {
+  flex: 40% 1 1;
+  margin-left: 0.5em;
+}
+
+.video__iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+.image__thumbnail {
+  width: 100%;
+  height: 100%;
+}
+
+/* -- Note -- */
+.note {
+  padding: 0.5em;
+}
+
+.note__body {
+  color: var(--smokywhite);
+}
+
+/* -- TODO -- */
+.todo {
+  padding: 0.5em;
+}
+
+.todo__list,
+.todo-label {
+  padding: 1em;
+  color: var(--smokywhite);
 }
