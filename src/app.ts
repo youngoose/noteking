@@ -26,8 +26,31 @@ class App {
     this.page = new PageComponent(PageItemComponent);
     this.page.attachTo(appRoot);
 
-    //'https://picsum.photos/600/300'
-    //'https://youtu.be/zsu2n-SbTrY'
+    // For demo :)
+    this.page.addChild(
+      new ImageComponent('Image Title', 'https://picsum.photos/800/400')
+    );
+    this.page.addChild(
+      new VideoComponent(
+        'Video Title',
+        'https://www.youtube.com/watch?v=wcIf3huwFhc'
+      )
+    );
+    this.page.addChild(
+      new NoteComponent('Note Title', 'Checklist before the demo')
+    );
+    this.page.addChild(new TodoComponent('Todo Title', 'Pay the bill!'));
+    this.page.addChild(
+      new ImageComponent('Image Title', 'https://picsum.photos/600/300')
+    );
+    this.page.addChild(
+      new VideoComponent(
+        'Video Title',
+        'https://www.youtube.com/watch?v=WBMhOZqhQbU'
+      )
+    );
+    this.page.addChild(new NoteComponent('Note Title', 'DO NOT MULTITASKING'));
+    this.page.addChild(new TodoComponent('Todo Title', 'Create a project!'));
 
     this.bindElementToDialog(
       '#new-image',
